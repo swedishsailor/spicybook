@@ -1,0 +1,24 @@
+{
+  "name": "spicybook",
+  "version": "1.0.0",
+  "description": "online cookbook",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+	"build": "webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/swedishsailor/spicybook.git"
+  },
+  "author": "Sweedy",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/swedishsailor/spicybook/issues"
+  },
+  "homepage": "https://github.com/swedishsailor/spicybook#readme",
+  "devDependencies": {
+    "webpack-cli": "^4.9.1",
+    "webpack-dev-server": "^4.7.1"
+  }
+}
