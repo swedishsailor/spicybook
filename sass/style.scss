@@ -1,7 +1,8 @@
 /*  GLOBALS */
 html{
-    background:rgb(55, 55, 182);
+    background:#010038;
     color:#fff;
+    font-family: 'EB Garamond', serif;
 }
 
 /*  HEADER */
@@ -20,7 +21,7 @@ html{
     height:70px;
     display: flex;
     //background:rgb(52, 163, 207);
-    background:rgba(0,0,0,0.24);
+    background:#293A80;
     width: 100%;
     position: fixed;
     top:0;
@@ -45,8 +46,8 @@ html{
     color:rgb(245, 196, 122);
     align-items: center;
     margin-inline: 25px;
-    background:rgba(0,0,0,0.44);
-    width:125px;
+    background:#537EC5;
+    width:145px;
     text-align: center;
 
     &:hover{
@@ -54,10 +55,11 @@ html{
     }    
 }
 .fas{
-    color:#fd79a8; 
+    color:#F39422; 
     margin-inline: 0;
     background:none;
     width: 95px;
+    font-size: 34px;
 
     &:hover{
         color:greenyellow;
@@ -74,4 +76,35 @@ html{
     min-height: 150px;
     display: flex;
     flex-wrap: wrap;
+    padding:35px;
+}
+.recipeDiv{
+    width: 196px;
+    height: 196px;
+    background:red;
+    margin-inline: 7.5px;
+
+    img{
+        width: inherit;
+        height: inherit;
+        object-fit: cover;
+        z-index: 0;
+        position: absolute;
+    }
+    .recipeTitle{
+        color:#000;
+        z-index: 3;
+        position: absolute;
+        width: inherit;
+        height: 60px;
+        text-align: center;
+        font-size: 24px;
+        background:rgba(0,0,0,0.21);
+        margin-top:145px;
+    }
+    
+    &:hover{
+            opacity:0.6;
+            transition:cubic-bezier(0.895, 0.03, 0.685, 0.22);
+    }
 }
