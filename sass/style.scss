@@ -1,0 +1,77 @@
+/*  GLOBALS */
+html{
+    background:rgb(55, 55, 182);
+    color:#fff;
+}
+
+/*  HEADER */
+.headerTitle{
+    margin-top:100px;
+    text-align: center;
+    font-size:42px;
+}
+.headerParagraph{
+    font-size: 21px;
+    text-align: center;
+}
+
+/*  NAVBAR */
+.navBar{
+    height:70px;
+    display: flex;
+    //background:rgb(52, 163, 207);
+    background:rgba(0,0,0,0.24);
+    width: 100%;
+    position: fixed;
+    top:0;
+    left:0;
+    justify-content: center;
+}
+.searchDiv{
+    margin-left:295px;
+    margin-block:auto;
+    display: flex;
+    flex-direction: row;
+    .searchInput{
+        height: 40px;
+        margin-block: auto;
+    }
+}
+.navLinks{
+    padding:10px;
+    margin-block:auto;
+    font-size: 25px;
+    text-decoration: none;
+    color:rgb(245, 196, 122);
+    align-items: center;
+    margin-inline: 25px;
+    background:rgba(0,0,0,0.44);
+    width:125px;
+    text-align: center;
+
+    &:hover{
+        background:rgba(255,255,255,0.14);
+    }    
+}
+.fas{
+    color:#fd79a8; 
+    margin-inline: 0;
+    background:none;
+    width: 95px;
+
+    &:hover{
+        color:greenyellow;
+        transition: 1.5s cubic-bezier();
+        background:none;
+    }
+}
+
+/*  MAIN */
+.main{
+    width:90%;
+    margin-inline: auto;
+    background:rgba(0,0,0,0.1);
+    min-height: 150px;
+    display: flex;
+    flex-wrap: wrap;
+}
