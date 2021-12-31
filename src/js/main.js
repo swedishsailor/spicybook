@@ -1,4 +1,5 @@
 import { data } from './data';
+import {mainHtmlMaker} from './functions';
 
 class Recipe {
     constructor(id, name, img, href) {
@@ -9,8 +10,7 @@ class Recipe {
         thisRecipe.href = href;
     }
     render() {
-        const html = `<div class="recipeDiv"><img src="${this.img}"><p class="recipeTitle">${this.name}</p></div>`;
-        return mainContainer.innerHTML += html;
+        return mainContainer.innerHTML += mainHtmlMaker(this.id,this.img,this.name);
     }
 
 }
@@ -19,19 +19,24 @@ class Recipe {
 let allRecipes = [];
 
 /* Querry */
-const recipeWindow = document.querySelectorAll('.recipeDiv');
+let recipeWindow = document.querySelectorAll('.recipeDiv');
+const recipeImg = document.querySelectorAll('.recipeImg');
 const mainContainer = document.querySelector('.main');
 const searchInput = document.querySelector('.searchInput');
 const searchSubmit = document.querySelector('.fa-search');
 
-
-/* Actions */
+/* Functions */
 // Click the recipe
-recipeWindow.forEach(window => {
-    window.addEventListener('click', () => {
-        console.log('clicked');
-    })
-})
+const initEventListeners = () => {
+    setTimeout(() => {
+        recipeWindow = document.querySelectorAll('.recipeDiv');
+        recipeWindow.forEach(window => {
+            window.addEventListener('click', () => {
+                console.log('clicked', window.id);
+            })
+        })
+    }, 100);
+}
 
 // Search for input recipes
 searchSubmit.addEventListener('click', () => {
@@ -40,15 +45,17 @@ searchSubmit.addEventListener('click', () => {
     // Check if there is any result of searching: if yes display it, if not display error inscription
     filteredRecipes.length  == 0 ? mainContainer.innerHTML = `<p class="notFound">No recipes found at name "${searchInput.value}"</p>` : mainContainer.innerHTML ='';
     filteredRecipes.forEach(element => {
-        const html = `<div class="recipeDiv"><img src="${element.img}"><p class="recipeTitle">${element.name}</p></div>`;
-        mainContainer.innerHTML += html;
+        mainContainer.innerHTML += mainHtmlMaker(element.id, element.img, element.name);
     })
-
+    initEventListeners();
 })
 // init Recipes
 data.forEach(element => {
-    const recipe = new Recipe(element.id, element.name);
+    const recipe = new Recipe(element.id, element.name, element.img, element.href);
     allRecipes.push(recipe);
     recipe.render();
 });
 
+/* Actions */
+// Click the recipe
+initEventListeners();

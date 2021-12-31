@@ -22,5 +22,11 @@ export const data = [
         name:`home ice cream`,
         img:`https://i.postimg.cc/dtqs0n1m/pexels-daria-shevtsova-1251226.jpg`,
         href:`3`
+    },
+    {
+        id:4,
+        name:`omelette`,
+        img:`https://i.postimg.cc/pLWJRHgL/pexels-daria-shevtsova-1095550.jpg`,
+        href:`3`
     }
 ]

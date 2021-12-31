@@ -82,12 +82,15 @@ html{
   display: flex;
   flex-wrap: wrap;
   padding:35px;
+  justify-content: center;
 }
 .recipeDiv{
   width: 196px;
   height: 196px;
   background:red;
-  margin-inline: 7.5px;
+  margin: 7.5px;
+  align-self: center;
+  
 
   img{
       width: inherit;
@@ -97,19 +100,20 @@ html{
       position: absolute;
   }
   .recipeTitle{
-      color:#000;
+      color:#fff;
       z-index: 3;
       position: absolute;
       width: inherit;
-      height: 60px;
+      height: 50px;
       text-align: center;
-      font-size: 24px;
-      background:rgba(0,0,0,0.21);
-      margin-top:145px;
+      font-size: 26px;
+      background:rgba(0,0,0,0.81);
+      margin-top:146px;
+      font-weight: bold;
   }
   
   &:hover{
-          opacity:0.6;
+          opacity:0.25;
           transition:cubic-bezier(0.895, 0.03, 0.685, 0.22);
   }
 }
