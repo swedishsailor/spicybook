@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkwebpack_boilerplate=self.webpackChunkwebpack_boilerplate||[]).push([[179],{593:()=>{console.log([{id:0,name:"1",img:"1",href:"1"},{id:1,name:"2",img:"2",href:"2"}])}},e=>{e(e.s=593)}]);
