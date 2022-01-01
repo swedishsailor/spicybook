@@ -10,12 +10,11 @@ html{
   color: #8b0404;
 }
 .back{ 
-  font-size: 56px;
+  font-size: 62px;
   color:#fff;
-  margin-top:120px;
-  margin-left:30px;
   opacity:0.8;
   animation: anim 4s infinite;
+  position: fixed;
 
   &:hover{
     color:rgb(60, 226, 135);
@@ -23,19 +22,19 @@ html{
 
   @keyframes anim {
     0%{
-      margin-left: 30px;
+      margin-left: 80px;
     }
     25%{
-      margin-left: 5px;
+      margin-left: 55px;
     }
     50%{
-      margin-left: 30px;
+      margin-left: 80px;
     }
     75%{
-      margin-left: 5px;
+      margin-left: 55px;
     }
     100%{
-      margin-left: 30px;
+      margin-left: 80px;
     }
   }
 }
@@ -69,12 +68,13 @@ html{
   display: flex;
   flex-direction: row;
   .searchInput{
-      height: 40px;
+      height: 30px;
       margin-block: auto;
+      font-size: 18px;
   }
 }
 .navLinks{
-  padding:10px;
+  padding:5px;
   margin-block:auto;
   font-size: 25px;
   text-decoration: none;
@@ -90,7 +90,7 @@ html{
   }    
 }
 .fas{
-  color:#F39422; 
+  color:#fd6868; 
   margin-inline: 0;
   background:none;
   width: 95px;
@@ -150,7 +150,7 @@ html{
 
 /* Recipe details */
 .recipeDetails{
-  margin-top:15px;
+  margin-top:165px;
   width:95%;
   margin-inline: auto;
   display: flex;
@@ -163,16 +163,21 @@ html{
 
     .details{
       min-height: 200px;
-      background:#fff;
-      width:650px;
-      margin: auto;
+      background:#fa90ec;
+      //background: linear-gradient(90deg, rgba(230,97,245,1) 8%, rgba(230,97,245,1) 22%, rgba(225,76,241,1) 31%, rgba(221,89,235,1) 37%, rgba(216,105,227,1) 43%, rgba(231,85,245,1) 58%, rgba(232,59,249,1) 73%, rgba(234,69,250,1) 95%);
+      width:550px;
+      margin-left: auto;
       padding: 95px;
       padding-block:25px;
-      margin-top: 85px;
+      margin-top: 115px;
+      border-radius: 15px;
+      
       .text{
+        padding-inline: 25px;
         color:#000;
-        font-size: 22px;
+        font-size: 24px;
         margin-top: 55px;
+        text-align: center;
       }
     }
   }
@@ -185,12 +190,13 @@ html{
 
     .img{
       min-height: 400px;
-      background:rgb(201, 76, 76);
+      background:rgb(0, 0, 0);
       flex:1;
       margin: auto;
       width:600px;
       object-fit: cover;
       object-position: center;
+      border:11px double lightgreen;
     }
     .ingredients{
       margin-top: 15px;
@@ -204,7 +210,7 @@ html{
 
       .list{
         margin:auto;
-        list-style: circle;
+        list-style: none;
         margin-top: 50px;
         width:320px;
         padding-block: 10px;
@@ -216,15 +222,14 @@ html{
         }
       }
       .listItem{
-        font-size: 21px;
+        font-size: 22px;
         color:#000;
-        padding:7.5px;
         text-align: center;
 
       }
     }
   }
 }
-
 @import 'variables';
+@import './login.scss';
 

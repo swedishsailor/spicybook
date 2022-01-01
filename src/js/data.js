@@ -4,7 +4,7 @@ export const data = [
         name:`chili`,
         img:`https://i.postimg.cc/Wb7Bfvs0/pexels-naim-benjelloun-1618906.jpg`,
         href:`1`,
-        text:'Najpierw wrzuc do garnaa',
+        text:'Pokrój i gotuj chili przez 20 minit, w tym czasie przygotuj pieprz, sól i dosyp do oregano. Następnie wlej gorące czili i zacznij mieszać aż do uzyskania gładkiego i lekkiego kremu. Później wymieszaj wszsytko razem z kolendrą, gałką muszkatołową i chlebkiem francuskim. Danie podawać ciepłe lub zimne z dodatkiem tymianku.',
         bigImg:`https://i.postimg.cc/qvydnF5h/pexels-horizon-content-3763792.jpg`,
         ingredients:['salt','pepper', 'chili', 'milk - 20ml']
     },
@@ -13,7 +13,7 @@ export const data = [
         name:`indian fast pasta`,
         img:`https://i.postimg.cc/6qrkKsnJ/pexels-lgh-1256875.jpg`,
         href:`2`,
-        text:'ale wszyscy mowia na mnie domingo, zapisaliscie sie dobrowalnie na program',
+        text:'Makaron ugotuj w osolonej wodzie z dodatkiem oliwy. Odcedź.Cebulę oraz czosnek posiekaj, cukinię pokrój w niewielką kostkę. Przesmaż wszystko razem na rozgrzanej oliwie. Fasolę oraz kukurydzę odsącz na sicie i przepłucz pod bieżącą wodą. Kolendrę posiekaj.Gotuj chwilę, po czym dodaj fasolę, kukurydzę oraz kolendrę. Na koniec wymieszaj wszystko z makaronem. Całość doprowadź do wrzenia i natychmiast podawaj. Udekoruj listkami kolendry.',
         bigImg:`https://i.postimg.cc/KYcx2N01/pexels-ella-olsson-3026808.jpg`,
         ingredients:['salt','pepper']
     },
