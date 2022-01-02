@@ -1,0 +1,69 @@
+.createRecipeContainer{
+    width:50%;
+    margin:auto;
+    margin-top:95px;
+    display: flex;
+    flex-direction: column;
+    .createRecipeTitle{
+        text-align: center;
+    }
+    .row{
+        margin:auto;
+        margin-block:15px;
+
+        label{
+            margin-inline: 20px;
+            font-size: 24px;
+        }
+        input{
+            margin-inline:20px;
+            width:350px;
+            height:29px;
+            border:none;
+            border-radius: 2.5px;
+            font-size:18px;
+        }
+        .descriptionInput{
+            font-size:16px;
+            width:350px;
+        }
+        select{
+            width:55px;
+            text-align: center;
+            height: 25px;
+        }
+        .steps{
+            color:#F8EFBA;
+        }
+        button{
+            background:lightgreen;
+            border:none;
+            width:180px;
+            height:45px;
+            border-radius:4.5px;
+            font-size: 22px;
+            box-shadow: 20px 10px rgb(209, 248, 219);
+            animation: btn 2s infinite;
+
+            &:hover{
+                box-shadow: 0 0 rgb(255,255,255);
+                transition: 0.4s;
+                background:rgb(0, 255, 64);
+            }
+
+            @keyframes btn {
+
+                25%{
+                    box-shadow: 0 7px rgb(209, 248, 219);
+                }
+                50%{
+                    box-shadow: -10px 10px rgb(209, 248, 219);
+                }
+                75%{
+                    box-shadow: 0 6px rgb(209, 248, 219);
+                }
+
+            }
+        }
+    }
+}

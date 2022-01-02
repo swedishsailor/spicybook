@@ -2,7 +2,7 @@ import { data } from './data';
 import { mainHtmlMaker, getHTML, generalHtmlMaker } from './functions';
 
 class Recipe {
-    constructor(id, name, img, href, text, bigImg, ingredients) {
+    constructor(id, name, img, href, text, bigImg, ingredients, steps) {
         const thisRecipe = this;
         thisRecipe.id = id;
         thisRecipe.name = name;
@@ -11,6 +11,7 @@ class Recipe {
         thisRecipe.text = text;
         thisRecipe.bigImg = bigImg;
         thisRecipe.ingredients = ingredients;
+        thisRecipe.steps = steps;
     }
     render() {
         return mainContainer.innerHTML += mainHtmlMaker(this.id, this.img, this.name);
@@ -34,8 +35,6 @@ const searchInput = document.querySelector('.searchInput');
 const searchSubmit = document.querySelector('.fa-search');
 const backButton = document.querySelector('.back');
 const homeIcon = document.querySelector('.homeIcon');
-
-const createRecipeButton = document.querySelector('.createRecipeButton');
 
 /* Functions */
 
@@ -67,7 +66,7 @@ searchSubmit.addEventListener('click', () => {
 })
 // init Recipes
 data.forEach(element => {
-    const recipe = new Recipe(element.id, element.name, element.img, element.href, element.text, element.bigImg, element.ingredients);
+    const recipe = new Recipe(element.id, element.name, element.img, element.href, element.text, element.bigImg, element.ingredients, element.steps);
     allRecipes.push(recipe);
     recipe.render();
 });
@@ -92,7 +91,7 @@ const initEventListeners = () => {
             window.addEventListener('click', () => {
                 const thisRecipe = allRecipes[window.id];
                 generalContainer.innerHTML = '';
-                generalContainer.innerHTML += generalHtmlMaker(thisRecipe.text, thisRecipe.bigImg, thisRecipe.ingredients);
+                generalContainer.innerHTML += generalHtmlMaker(thisRecipe.name, thisRecipe.text, thisRecipe.steps, thisRecipe.bigImg, thisRecipe.ingredients);
             })
         })
     }, 100);

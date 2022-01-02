@@ -1,21 +1,21 @@
 // Create HTML for recipy divs 
-export const mainHtmlMaker = (id,img,name) => {
+export const mainHtmlMaker = (id, img, name) => {
     return `<div class="recipeDiv" id="${id}"><img class="recipeImg" src="${img}"><p class="recipeTitle">${name}</p></div>`;
 }
 
-export const generalHtmlMaker = (text,bigImg, ingredients) =>  {
-return '<i class="far fa-arrow-alt-circle-left back"></i><div class="recipeDetails"><div class="leftPanel"><div class="details"><p class="text">'+ text + '</p></div></div><div class="rightPanel"><img class="img" src="' + bigImg +'"><div class="ingredients">' + '<ul class="list"><p class="listName">Ingredients</p>' + ingredients.map(element => `<li class="listItem">${element}</li>`) +'</ul>' + '</div></div></div>';
+export const generalHtmlMaker = (name,text, steps, bigImg, ingredients) => {
+    return '<i class="far fa-arrow-alt-circle-left back"></i><div class="recipeDetails"><div class="leftPanel"><div class="details"><h2 class="recipeName">' + name + '</h2><p class="text">' + text + '</p><img class="textDecoration" src="https://i.postimg.cc/mgXxXCCY/squirrels.png" alt="Decoration"/><ul class="stepsList">' + steps.map(element => `<li class="steps"><span>Krok ${steps.indexOf(element) + 1}</span> : ${element}</li>`).join('') + '</ul></div></div><div class="rightPanel"><img class="img" src="' + bigImg + '"><div class="ingredients">' + '<ul class="list"><p class="listName">Ingredients</p>' + ingredients.map(element => `<li class="listItem">${element}</li>`).join('') + '</ul>' + '</div></div></div>';
 }
 
 export const getHTML = (who, deep) => {
-    if(!who || !who.tagName) return '';
-    let txt, ax, el= document.createElement("div");
+    if (!who || !who.tagName) return '';
+    let txt, ax, el = document.createElement("div");
     el.appendChild(who.cloneNode(false));
-    txt= el.innerHTML;
-    if(deep){
-        ax= txt.indexOf('>')+1;
-        txt= txt.substring(0, ax)+who.innerHTML+ txt.substring(ax);
+    txt = el.innerHTML;
+    if (deep) {
+        ax = txt.indexOf('>') + 1;
+        txt = txt.substring(0, ax) + who.innerHTML + txt.substring(ax);
     }
-    el= null;
+    el = null;
     return txt;
 }

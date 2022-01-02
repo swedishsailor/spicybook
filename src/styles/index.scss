@@ -4,6 +4,9 @@ html{
   color:#fff;
   font-family: 'EB Garamond', serif;
 }
+h2{
+  font-size:42px;
+}
 .notFound{
   font-size: 46px;
   margin:auto;
@@ -161,6 +164,16 @@ html{
     flex:1;
     min-height: 200px;
 
+    .recipeName{
+      text-align: center;
+      color:#000;
+    }
+
+    .textDecoration{
+      width: 34%;
+      margin-left:33%;
+    }
+
     .details{
       min-height: 200px;
       background:#fa90ec;
@@ -180,6 +193,21 @@ html{
         text-align: center;
       }
     }
+
+    .stepsList{
+      color:#000;
+      font-size: 24px;
+      list-style: none;
+      padding-top:25px;
+
+      span{
+        font-weight: bold;
+      }
+
+      .steps{
+        margin-block:25px;
+      }
+    }
   }
   .rightPanel{
     //background: #8b0404;
@@ -196,7 +224,7 @@ html{
       width:600px;
       object-fit: cover;
       object-position: center;
-      border:11px double lightgreen;
+      border:2px solid #000;
     }
     .ingredients{
       margin-top: 15px;
@@ -225,11 +253,13 @@ html{
         font-size: 22px;
         color:#000;
         text-align: center;
-
+        margin-block:15px;
+        font-weight: bold;
       }
     }
   }
 }
 @import 'variables';
 @import './login.scss';
+@import './createRecipe.scss';
 
