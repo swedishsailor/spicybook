@@ -36,19 +36,20 @@
             color:#F8EFBA;
         }
         button{
-            background:lightgreen;
+            background:rgb(0, 255, 64);
             border:none;
-            width:180px;
-            height:45px;
+            width:195px;
+            height:55px;
             border-radius:4.5px;
             font-size: 22px;
-            box-shadow: 20px 10px rgb(209, 248, 219);
-            animation: btn 2s infinite;
+            //box-shadow: 20px 10px rgb(209, 248, 219);
+            //animation: btn 2s infinite;
 
             &:hover{
                 box-shadow: 0 0 rgb(255,255,255);
                 transition: 0.4s;
-                background:rgb(0, 255, 64);
+                background:rgb(129, 243, 76);
+                color:#fff;
             }
 
             @keyframes btn {
