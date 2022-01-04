@@ -1,12 +1,12 @@
 import { generalContainer } from "./main";
+import { url } from "./constants";
 import axios from 'axios';
 
 /* Variables */
 // Number of steps to choose in creator
 const nr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
-// Data endpoint
-const url='http://localhost:4000';
-const postUrl = 'http://localhost:4000/data';
+// Data 
+let fetchedData;
 
 // Query button
 const createRecipeButton = document.querySelector('.createRecipeButton');
@@ -16,7 +16,7 @@ const createRecipeButton = document.querySelector('.createRecipeButton');
 // Click the nav button
 createRecipeButton.addEventListener('click', () => {
     generalContainer.innerHTML = '';
-    generalContainer.innerHTML += '<div class="createRecipeContainer"><i class="far fa-arrow-alt-circle-left back"></i><h2 class="createRecipeTitle">Create recipe!</h2><form '+ /*action="http://localhost:4000/data"*/ '><div class="row"><label>Name :</label><input placeholder="type name of recipe..." class="nameInput" type="text"/></div><div class="row"><label>Description :</label><textarea class="descriptionInput" placeholder="" type="textarea" rows="4" cols="50"></textarea></div><div class="row"><label>Ingredients :</label><input class="ingredientsInput" type="text" placeholder="pepper, salt, sushi rice, wasabi"/></div><div class="row"><label>Number of steps :</label><select class="selectSteps">' + nr.map(i => `<option class="stepInput" value="${i}">${i}</option>`) + '</select></div><div class="row stepDiv">' + `<label class="steps">Step ${1}<input class="stepsText"/>` + '</div><div class="row"><label>Small image :</label><input class="smallImageInput" placeholder="paste here image url" type="text"/></div><div class="row"><label>Big image :</label><input placeholder="paste here image url" class="bigImageInput" type="text"/></div><div class="row"><button type="submit" class="createRecipeButton">Create</buton></div></form></div>';
+    generalContainer.innerHTML += '<div class="createRecipeContainer"><i class="far fa-arrow-alt-circle-left back"></i><h2 class="createRecipeTitle">Create recipe!</h2><div class="row"><label>Name :</label><input placeholder="type name of recipe..." class="nameInput" type="text"/></div><div class="row"><label>Description :</label><textarea class="descriptionInput" placeholder="" type="textarea" rows="4" cols="50"></textarea></div><div class="row"><label>Ingredients :</label><input class="ingredientsInput" type="text" placeholder="pepper, salt, sushi rice, wasabi"/></div><div class="row"><label>Number of steps :</label><select class="selectSteps">' + nr.map(i => `<option class="stepInput" value="${i}">${i}</option>`) + '</select></div><div class="row stepDiv">' + `<label class="steps">Step ${1}<input class="stepsText"/>` + '</div><div class="row"><label>Small image :</label><input class="smallImageInput" placeholder="paste here image url" type="text"/></div><div class="row"><label>Big image :</label><input placeholder="paste here image url" class="bigImageInput" type="text"/></div><div class="row"><button type="submit" class="createRecipeButton">Create</buton></div></div>';
 
 })
 
@@ -45,7 +45,7 @@ generalContainer.addEventListener('change', (e) => {
 
 const getData = () => {
     axios.get(url+'/data')
-    .then(data=>console.log(data.data))
+    .then(data=>fetchedData = data.data)
     .catch(err=>console.log(err))
 }
 
@@ -53,7 +53,7 @@ const postData = (payload) => {
     axios.post(url+'/datapost', {
         payload
     })
-    .then(data=>console.log(data))
+    //.then(data=>console.log(data))
     .catch(err=>console.log(err))
 }
 
@@ -61,7 +61,7 @@ const postIngredients = (payload) => {
     axios.post(url+'/ingredientspost', {
         payload
     })
-    .then(data=>console.log(data))
+    //.then(data=>console.log(data))
     .catch(err=>console.log(err))
 }
 
@@ -69,7 +69,7 @@ const postSteps = (payload) => {
     axios.post(url+'/stepspost', {
         payload
     })
-    .then(data=>console.log(data))
+    //.then(data=>console.log(data))
     .catch(err=>console.log(err))
 }
 
@@ -78,7 +78,8 @@ generalContainer.addEventListener('click', (e, name,description, ingredients, st
         // create button click
         if(e.target.classList.contains('createRecipeButton')){
             // GET data http request
-            getData();
+           getData();
+           console.log(fetchedData);
            name = generalContainer.querySelector('.nameInput').value; 
            description = generalContainer.querySelector('.descriptionInput').value; 
            ingredients = generalContainer.querySelector('.ingredientsInput').value.split(',');
@@ -94,7 +95,8 @@ generalContainer.addEventListener('click', (e, name,description, ingredients, st
            // Define payload and add to it all features
            // POST all data
            let payload = {};
-           payload.id = 2;
+           // GET the number of data then find it's length and produce id 
+           payload.id = fetchedData !== undefined ? fetchedData.length + 1 : 1;
            payload.name = name;
            payload.text = description;
            payload.img = smallImage;
@@ -122,4 +124,6 @@ generalContainer.addEventListener('click', (e, name,description, ingredients, st
            //console.log(payload);
         }
 })
+
+getData();
 
