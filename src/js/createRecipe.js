@@ -35,7 +35,7 @@ const renderSteps = (value) => {
 }
 
 
-// event delegation on change then umber of steps in select then render number of steps under
+// event delegation on change then number of steps in select then render number of steps under
 generalContainer.addEventListener('change', (e) => {
     if(e.target.classList.contains('selectSteps')){
     console.log(e.target.value);

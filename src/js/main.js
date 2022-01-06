@@ -103,3 +103,9 @@ const initEventListeners = () => {
 }
 // Click the recipe
 initEventListeners();
+
+/* HERE IS TEMPORARY METHOD WHICH REFRESHES THE PAGE DUE TO HEROKU SERVER ACTIVATION, SO IF DATA HAVEN'T ARRIVED -> REFRESH PAGE */
+console.log(data);
+if(data == []){
+    window.location.reload();
+}

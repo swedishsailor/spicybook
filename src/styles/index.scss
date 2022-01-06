@@ -74,26 +74,36 @@ h2{
       height: 30px;
       margin-block: auto;
       font-size: 18px;
+      border: none;
+      border-radius:5px;
+
+      &::placeholder{
+        text-align: center;
+      }
+      &:focus{
+        border: none;
+      }
   }
 }
 .navLinks{
-  padding:5px;
+  padding:7.5px;
   margin-block:auto;
   font-size: 25px;
   text-decoration: none;
-  color:rgb(245, 196, 122);
+  color:rgb(245, 192, 114);
   align-items: center;
   margin-inline: 25px;
-  background:#537EC5;
+  background:#2464ca;
   width:145px;
   text-align: center;
+  border-radius: 5px;
 
   &:hover{
-      background:rgba(255,255,255,0.14);
+      background:rgba(0,0,0,0.24);
   }    
 }
 .fas{
-  color:#fd6868; 
+  color:#f8daaf; 
   margin-inline: 0;
   background:none;
   width: 95px;
@@ -167,7 +177,7 @@ h2{
 
 /* Recipe details */
 .recipeDetails{
-  margin-top:165px;
+  margin-top:125px;
   width:95%;
   margin-inline: auto;
   display: flex;
@@ -180,23 +190,26 @@ h2{
 
     .recipeName{
       text-align: center;
-      color:#000;
+      color:#6D214F;
+      text-shadow: 0 0 2px #6702aa;
     }
 
     .textDecoration{
       width: 34%;
-      margin-left:33%;
+      margin-left:28%;
+      padding:10px;
+      padding-block:25px;
     }
 
     .details{
       min-height: 200px;
-      background:#fa90ec;
+      background:#fdf3b8;
       //background: linear-gradient(90deg, rgba(230,97,245,1) 8%, rgba(230,97,245,1) 22%, rgba(225,76,241,1) 31%, rgba(221,89,235,1) 37%, rgba(216,105,227,1) 43%, rgba(231,85,245,1) 58%, rgba(232,59,249,1) 73%, rgba(234,69,250,1) 95%);
-      width:550px;
+      width:450px;
       margin-left: auto;
       padding: 95px;
       padding-block:25px;
-      margin-top: 115px;
+      margin-top: 75px;
       border-radius: 15px;
       
       .text{
@@ -212,7 +225,7 @@ h2{
       color:#000;
       font-size: 24px;
       list-style: none;
-      padding-top:25px;
+      padding-top:5px;
 
       span{
         font-weight: bold;
@@ -232,16 +245,16 @@ h2{
 
     .img{
       min-height: 400px;
-      background:rgb(0, 0, 0);
+      background:rgba(255, 255,255, 0.2);
       flex:1;
       margin: auto;
       width:600px;
       object-fit: cover;
       object-position: center;
-      border:2px solid #000;
+      padding:5px;
+      border:3px solid rgba(0,0,0,0.8);
     }
     .ingredients{
-      margin-top: 15px;
       min-height: 100px;
       flex:1;
       margin: auto;
