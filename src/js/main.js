@@ -65,11 +65,16 @@ searchSubmit.addEventListener('click', () => {
     initEventListeners();
 })
 // init Recipes
-data.forEach(element => {
-    const recipe = new Recipe(element.id, element.name, element.img, element.href, element.text, element.bigImg, element.ingredients, element.steps);
-    allRecipes.push(recipe);
-    recipe.render();
-});
+setTimeout(() => {
+    data.forEach(element => {
+        const recipe = new Recipe(element.id, element.name, element.img, element.href, element.text, element.bigImg, element.ingredients, element.steps);
+        allRecipes.push(recipe);
+        recipe.render();
+    });  
+}, 210);
+
+
+
 
 /* Actions */
 homeIcon.addEventListener('click', () => {
@@ -89,12 +94,12 @@ const initEventListeners = () => {
         recipeWindow = document.querySelectorAll('.recipeDiv');
         recipeWindow.forEach(window => {
             window.addEventListener('click', () => {
-                const thisRecipe = allRecipes[window.id];
+                const thisRecipe = allRecipes[window.id-1];
                 generalContainer.innerHTML = '';
                 generalContainer.innerHTML += generalHtmlMaker(thisRecipe.name, thisRecipe.text, thisRecipe.steps, thisRecipe.bigImg, thisRecipe.ingredients);
             })
         })
-    }, 100);
+    }, 220);
 }
 // Click the recipe
 initEventListeners();

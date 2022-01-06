@@ -46,10 +46,10 @@ h2{
 .headerTitle{
   margin-top:100px;
   text-align: center;
-  font-size:42px;
+  font-size:64px;
 }
 .headerParagraph{
-  font-size: 21px;
+  font-size: 31px;
   text-align: center;
 }
 
@@ -120,9 +120,13 @@ h2{
 .recipeDiv{
   width: 196px;
   height: 196px;
-  background:red;
+  background:#000;
   margin: 7.5px;
+  margin-inline: 12.5px;
   align-self: center;
+  border-radius: 6.5px;
+  border:1px solid rgba(0,0,0,0.75);
+  box-shadow: rgba(245, 196, 122, 0.08) 5px 5px, rgba(245, 196, 122, 0.07) 10px 10px, rgba(245, 196, 122, 0.06) 15px 15px, rgba(245, 196, 122, 0.05) 20px 20px, rgba(245, 196, 122, 0.04) 25px 25px;
   
 
   img{
@@ -131,6 +135,15 @@ h2{
       object-fit: cover;
       z-index: 0;
       position: absolute;
+      border-radius: 6.5px;
+      
+      &:hover{
+        
+        transform: scale(1.12);
+        transition: all 0.76s;
+    
+
+      }
   }
   .recipeTitle{
       color:#fff;
@@ -146,8 +159,9 @@ h2{
   }
   
   &:hover{
-          opacity:0.25;
+          opacity:0.85;
           transition:cubic-bezier(0.895, 0.03, 0.685, 0.22);
+          box-shadow: rgba(0, 0, 0, 0.08) 5px 5px, rgba(0, 0, 0, 0.07) 10px 10px, rgba(0, 0, 0, 0.06) 15px 15px, rgba(0, 0, 0, 0.05) 20px 20px, rgba(0, 0, 0, 0.04) 25px 25px;
   }
 }
 

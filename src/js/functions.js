@@ -4,7 +4,7 @@ export const mainHtmlMaker = (id, img, name) => {
 }
 
 export const generalHtmlMaker = (name,text, steps, bigImg, ingredients) => {
-    return '<i class="far fa-arrow-alt-circle-left back"></i><div class="recipeDetails"><div class="leftPanel"><div class="details"><h2 class="recipeName">' + name + '</h2><p class="text">' + text + '</p><img class="textDecoration" src="https://i.postimg.cc/mgXxXCCY/squirrels.png" alt="Decoration"/><ul class="stepsList">' + steps.map(element => `<li class="steps"><span>Krok ${steps.indexOf(element) + 1}</span> : ${element}</li>`).join('') + '</ul></div></div><div class="rightPanel"><img class="img" src="' + bigImg + '"><div class="ingredients">' + '<ul class="list"><p class="listName">Ingredients</p>' + ingredients.map(element => `<li class="listItem">${element}</li>`).join('') + '</ul>' + '</div></div></div>';
+    return '<i class="far fa-arrow-alt-circle-left back"></i><div class="recipeDetails"><div class="leftPanel"><div class="details"><h2 class="recipeName">' + name + '</h2><p class="text">' + text + '</p><img class="textDecoration" src="https://i.postimg.cc/mgXxXCCY/squirrels.png" alt="Decoration"/><ul class="stepsList">' + steps.map(element => `<li class="steps"><span>Krok ${steps.indexOf(element) + 1}</span> : ${element.name}</li>`).join('') + '</ul></div></div><div class="rightPanel"><img class="img" src="' + bigImg + '"><div class="ingredients">' + '<ul class="list"><p class="listName">Ingredients</p>' + ingredients.map(element => `<li class="listItem">${element.name}</li>`).join('') + '</ul>' + '</div></div></div>';
 }
 
 export const getHTML = (who, deep) => {

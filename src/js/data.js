@@ -29,6 +29,8 @@ getIngredients();
 // its in SetTimout func becuase we want it to be the last executed func here
 setTimeout(() => {
     console.log(importedData);
+    console.log(importedSteps);
+    console.log(importedIngredients);
     let filteredSteps, filteredIngredients;
     // Filter all steps and ingredients and add them to the data with correct id
     importedData.forEach(element => {
@@ -39,7 +41,7 @@ setTimeout(() => {
     });
     correctData = importedData;
     data = correctData;
-}, 80);
+}, 210);
 
 export let data = correctData !== undefined? correctData : [];
 
