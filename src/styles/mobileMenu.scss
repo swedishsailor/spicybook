@@ -1,0 +1,17 @@
+.mobileMenu{
+
+    h2{
+        text-align: center;
+    }
+
+    .mobileMenuLink{
+        margin-block:35px;
+
+        &:hover{
+            color:#000;
+            transition: 0.55s;
+            cursor: pointer;
+        }
+    }
+}
+

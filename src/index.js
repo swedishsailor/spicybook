@@ -4,8 +4,10 @@ import { example } from '@/js/main'
 import './js/login';
 // Add createRecipe.js component
 import './js/createRecipe';
+import './js/mobileMenu';
 
 // Test import of styles
 import '@/styles/index.scss'
+
 
 
