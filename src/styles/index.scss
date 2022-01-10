@@ -147,6 +147,11 @@ h2 {
   position: absolute;
   right:0;
   top:20px;
+  display: none;
+
+  @media (max-width: 768px) {
+    display: block;
+  }
 }
 .fas {
   color: #000;

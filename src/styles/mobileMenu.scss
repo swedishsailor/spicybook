@@ -2,6 +2,7 @@
 
     h2{
         text-align: center;
+        color:#ACDDE7;
     }
 
     .mobileMenuLink{
@@ -11,6 +12,47 @@
             color:#000;
             transition: 0.55s;
             cursor: pointer;
+        }
+    }
+
+    p{
+        text-align: center;
+        margin-top:-23px;
+        font-style: oblique;
+        font-size:16px;
+    }
+
+    h1{
+        text-align: center;
+        font-size:36px;
+        font-style: oblique;
+
+        span:nth-child(1){
+            color:#E0ACD5;
+        }
+        span:nth-child(2){
+            color:#3993DD;
+        }
+        span:nth-child(3){
+            color:#F4EBE8;
+        }
+        span:nth-child(4){
+            color:#29E7CD;
+        }
+        span:nth-child(5){
+            color:#87BBA2;
+        }
+        span:nth-child(6){
+            color:#C9E4CA;
+        }
+        span:nth-child(7){
+            color:#95B8D1;
+        }
+        span:nth-child(8){
+            color:#E8DDB5;
+        }
+        span:nth-child(9){
+            color:#EDAFB8;
         }
     }
 }

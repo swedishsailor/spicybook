@@ -38,7 +38,7 @@ const homeIcon = document.querySelector('.homeIcon');
 
 /* Functions */
 
-const refreshMainView = () => {
+export const refreshMainView = () => {
     // make General Container of HTML an empty string
     generalContainer.innerHTML = '';
     // then add correct HTML from memory initialized at the start of using website
