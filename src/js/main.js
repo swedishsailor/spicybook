@@ -21,13 +21,13 @@ class Recipe {
 
 /* Varibales */
 let allRecipes = [];
-const containerHTML = document.querySelector('.container');
+const containerHTML = document.getElementById('container');
 // General Container HTML - made from taking whole container and turning it into a string
-const generalHTML = getHTML(containerHTML, true);
+export const generalHTML = getHTML(containerHTML, true);
 
 
 /* Querry */
-export const generalContainer = document.querySelector('.container');
+export const generalContainer = document.getElementById('container');
 let recipeWindow = document.querySelectorAll('.recipeDiv');
 const recipeImg = document.querySelectorAll('.recipeImg');
 const mainContainer = document.querySelector('.main');
@@ -39,6 +39,8 @@ const homeIcon = document.querySelector('.homeIcon');
 /* Functions */
 
 export const refreshMainView = () => {
+    window.location.reload();
+    /*
     // make General Container of HTML an empty string
     generalContainer.innerHTML = '';
     // then add correct HTML from memory initialized at the start of using website
@@ -48,7 +50,9 @@ export const refreshMainView = () => {
         // phrase below is generalContainer.innerHTML but it can't be taken from const variable
         document.querySelector('.main').innerHTML += mainHtmlMaker(element.id, element.img, element.name);
     })
+    
     initEventListeners();
+    */
 }
 
 

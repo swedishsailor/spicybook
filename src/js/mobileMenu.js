@@ -1,5 +1,6 @@
+import { loginHTML } from "./constants";
 import { getHTML } from "./functions";
-import {generalHTML, refreshMainView} from './main';
+import {generalContainer, generalHTML, refreshMainView} from './main';
 
 // Variables
 const church = getHTML(document.body,true);
@@ -18,15 +19,16 @@ const initMenuLinksListeners = () => {
 document.querySelector('.bars')
     ?
     document.querySelector('.bars').addEventListener('click', () => {
-        document.body.innerHTML = '<div class="mobileMenu"></div>';
+        document.body.innerHTML = '<div class="container"><div class="mobileMenu"></div></div>';
         // Add links to subpages
         document.querySelector('.mobileMenu').innerHTML += `<h1><span>S</span><span>p</span><span>i</span><span>c</span><span>y</span> <span>B</span><span>o</span><span>o</span><span>k</h1>`;
         document.querySelector('.mobileMenu').innerHTML += `<p>by SwedishSailor</p>`;
         document.querySelector('.mobileMenu').innerHTML += `<h2 class="mobileMenuLink" id="home">Home</h2>`;
-        document.querySelector('.mobileMenu').innerHTML += `<h2 class="mobileMenuLink" id="login">Log in</h2>`;
+        document.querySelector('.mobileMenu').innerHTML += `<h2 class="mobileMenuLink loginButton" id="login">Log in</h2>`;
         document.querySelector('.mobileMenu').innerHTML += `<h2 class="mobileMenuLink" id="register">Register</h2>`;
         document.querySelector('.mobileMenu').innerHTML += `<h2 class="mobileMenuLink" id="sponsors">Sponsors</h2>`;
         document.querySelector('.mobileMenu').innerHTML += `<h2 class="mobileMenuLink" id="recipes">Recipes</h2>`;
+
 
 
         // Add event listeners to Links
@@ -47,12 +49,15 @@ document.querySelector('.bars')
                 case 'home':
                     console.log('xd');
                     console.log(church);
-                    container.innerHTML = church;
-                    initMenuLinksListeners();
+                    //container.innerHTML = church;
+                    //initMenuLinksListeners();
+                    window.location.reload();
                     break;
                 // Login
                 case 'login':
                     console.log('xd');
+                    document.querySelector('.container').innerHTML = '';
+                    document.querySelector('.container').innerHTML += loginHTML;
                     break;
                 // Register
                 case 'register':
