@@ -73,6 +73,7 @@ h2 {
   top: 0;
   left: 0;
   justify-content: center;
+  z-index: 3;
   @media (max-width: 768px) {
     display: block;
   }
@@ -85,10 +86,13 @@ h2 {
 
 }
 .searchDiv {
-  margin-left: 295px;
+  margin-left: 115px;
   margin-block: auto;
   display: flex;
   flex-direction: row;
+  position: fixed;
+  right:115px;
+  top:20px;
   .searchInput {
     height: 30px;
     margin-block: auto;
@@ -109,28 +113,73 @@ h2 {
     }
   }
 }
-.navLinks {
-  padding: 7.5px;
+.textLinks{
+ margin-top:20px;
+  height: 100%;
+  @media (max-width: 1420px) and (min-width:768px) {
+    margin-left: -195px;
+  }
+}
+a.navLinks{
+  background: #efc9e0;
+  font-size: 23px;
+  padding: 10.5px;
   margin-block: auto;
-  font-size: 25px;
   text-decoration: none;
   color: #000;
-  align-items: center;
   margin-inline: 25px;
-  background: #efc9e0;
-  width: 145px;
+  width: 165px;
   text-align: center;
-  border-radius: 5px;
-  
-  @media (max-width: 768px) {
-    background:inherit;
-    margin-block:15px;
-    width:35px;
-   }
+  border-radius: 9px;
+  align-items: flex-start;
 
-   &:hover {
+
+  @media (max-width: 1630px) and (min-width:1420px) {
+    font-size:21px;
+    width:125px;
+ }
+ @media (max-width: 1420px) and (min-width:768px) {
+  font-size:21px;
+  width:125px;
+  margin-left: -20px;
+}
+@media (max-width: 768px) {
+  background:inherit;
+  margin-block:15px;
+  width:35px;
+ }
+  
+  &:hover {
     background: rgba(0, 0, 0, 0.24);
   }
+
+}
+i.navLinks {
+  width:115px;
+  margin-block:auto;
+  text-align: center;
+  position: fixed;
+
+  &:first-child{
+    left:15px;
+    top:15px;
+
+    @media (max-width: 768px) {
+      top:0;
+     }
+  }
+  &:last-child{
+    right:15px;
+    top:20px;
+  }
+
+@media (max-width: 768px) {
+  background:inherit;
+  margin-block:15px;
+  width:35px;
+ }
+
+
   }
 
 
@@ -157,7 +206,7 @@ h2 {
   color: #000;
   margin-inline: 0;
   background: none;
-  width: 95px;
+  width: 55px;
   font-size: 34px;
   cursor: pointer;
 }

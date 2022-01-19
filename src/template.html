@@ -16,24 +16,60 @@
 <body>
     <nav class="navBar">
         <i class="fas fa-drumstick-bite navLinks homeIcon"></i>
+        <div class="textLinks">
         <a href="#" class="navLinks">Recipes</a>
         <a href="#" class="navLinks">Sponsors</a>
         <a href="#" class="navLinks createRecipeButton">Create recipe</a>
         <a href="#" class="navLinks loginButton">Log in</a>
+    </div>
         <div class="searchDiv">
             <input class="searchInput" type="text" placeholder="Search for recipes">
             <i class="navLinks fas fa-search"></i>
         </div>
         <i class="fas fa-bars bars"></i>
     </nav>
-        <div class="container">
+        <div id="container">
             <h1 class="headerTitle"> Spicy Book </h1>
             <p class="headerParagraph"> let's cook something together :)</p>
             <div class="main">
 
             </div>
         </div>
+        <template id="loginTemplate">
+            <div class="loginContainer">
+                <i class="far fa-arrow-alt-circle-left back"></i>
+                <h2 class="loginTitle">Log in</h2>
+                <label>Account e-mail:</label><input class="loginInput" type="email" placeholder="Your e-mail"></input>
+                <label>Account password:</label><input class="loginInput" type="password" placeholder="Your password"></input>
+                <button type="submit" class="submitButton">Submit</button>
+                <p> or </p><a href="#" class="registerLink"> Register an account</a></div>
+        </template>
+        <template id="createRecipeTemplate">
+            <div class="createRecipeContainer">
+                <i class="far fa-arrow-alt-circle-left back"></i>
+                <h2 class="createRecipeTitle">Create recipe!</h2>
+                <div class="row">
+                    <label>Name :</label><input placeholder="type name of recipe..." class="nameInput" type="text"/>
+                </div>
+                <div class="row">
+                    <label>Description :</label><textarea class="descriptionInput" placeholder="This is my recipe \n I prepare this dish everyday for myself.\n etc... etc..." type="textarea" rows="4" cols="50"></textarea>
+                </div>
+                <div class="row">
+                    <label>Ingredients :</label><input class="ingredientsInput" type="text" placeholder="pepper, salt, sushi rice, wasabi"/>
+                </div>
+                <div class="row"><label>Number of steps :</label><select class="selectSteps"></select>
+                </div>
+                <div class="row stepDiv"><label class="steps"><input class="stepsText"/>
+                </div>
+                <div class="row"><label>Small image :</label><input class="smallImageInput" placeholder="paste here image link" type="text"/>
+                </div>
+                <div class="row"><label>Big image :</label><input placeholder="paste here image link" class="bigImageInput" type="text"/>
+                </div>
+                <div class="row"><button type="submit" class="createRecipeButton">Create</buton>
+                    </div>
+                </div>
+        </template>
 </body>
-<script src="./js/runtime.bundle.js"></script>
-<script src="./js/main.bundle.js"></script>
+<script defer src="./js/runtime.bundle.js"></script>
+<script defer src="./js/main.bundle.js"></script>
 </html>
