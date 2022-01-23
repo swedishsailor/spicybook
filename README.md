@@ -1,5 +1,5 @@
-###
-#Spicy Book
+###Spicy Book
+
 Spicybook is designed for cloud stoarging and render recipes added by "create recipe" panel. App created with vanilla JS and webpack
 
 ## Features
