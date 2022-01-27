@@ -9,6 +9,6 @@ let loginTemplateContent = loginTemplate.content;
 document.querySelector('.loginButton').addEventListener('click', () => {
     generalContainer.innerHTML = '';
     //generalContainer.innerHTML += loginHTML;
-    document.body.appendChild(loginTemplateContent);
+    generalContainer.appendChild(loginTemplateContent);
 })
 

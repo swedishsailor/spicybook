@@ -226,7 +226,7 @@ i.navLinks {
 .main {
   width: 90%;
   margin-inline: auto;
-  background: rgba(0, 0, 0, 0.1);
+  //background: rgba(0, 0, 0, 0.1);
   min-height: 150px;
   display: flex;
   flex-wrap: wrap;
@@ -243,8 +243,8 @@ i.navLinks {
   border-radius: 6.5px;
   cursor: pointer;
   border: 1px solid rgba(0, 0, 0, 0.75);
-  box-shadow: rgba(245, 196, 122, 0.08) 5px 5px, rgba(245, 196, 122, 0.07) 10px 10px,
-    rgba(245, 196, 122, 0.06) 15px 15px, rgba(245, 196, 122, 0.05) 20px 20px, rgba(245, 196, 122, 0.04) 25px 25px;
+  box-shadow: rgba(0, 0, 0, 0.08) 5px 5px, rgba(0, 0, 0, 0.07) 10px 10px,
+    rgba(0, 0, 0, 0.06) 15px 15px, rgba(0, 0, 0, 0.05) 20px 20px, rgba(0, 0, 0, 0.04) 25px 25px;
 
   img {
     width: inherit;

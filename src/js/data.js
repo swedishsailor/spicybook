@@ -37,9 +37,9 @@ const getIngredients = () => {
 // GET the data to create rendering objects from it
 getData();
 
-export const data = () => {
-    return getData();
-}
+// Prepare data promise to export it to the app main
+export const data = () => getData();
+
 
 // its in SetTimout func becuase we want it to be the last executed func here
 function dataPreparing(){
