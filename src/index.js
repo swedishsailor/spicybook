@@ -1,5 +1,6 @@
 // Test import of a JavaScript module
 import { example } from '@/js/main'
+import regeneratorRuntime from "regenerator-runtime";
 // Add login.js component
 import './js/login';
 // Add createRecipe.js component

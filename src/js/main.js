@@ -1,5 +1,6 @@
 import { data } from './data';
 import { mainHtmlMaker, getHTML, generalHtmlMaker } from './functions';
+import regeneratorRuntime from "regenerator-runtime";
 
 class Recipe {
     constructor(id, name, img, href, text, bigImg, ingredients, steps) {
@@ -68,14 +69,20 @@ searchSubmit.addEventListener('click', () => {
     })
     initEventListeners();
 })
-// init Recipes
+
+
+
+
+
 setTimeout(() => {
-    data.forEach(element => {
+    data().forEach(element => {
         const recipe = new Recipe(element.id, element.name, element.img, element.href, element.text, element.bigImg, element.ingredients, element.steps);
         allRecipes.push(recipe);
         recipe.render();
-    });  
+    })
 }, 210);
+
+// init Recipes
 
 
 
@@ -108,8 +115,3 @@ const initEventListeners = () => {
 // Click the recipe
 initEventListeners();
 
-/* HERE IS TEMPORARY METHOD WHICH REFRESHES THE PAGE DUE TO HEROKU SERVER ACTIVATION, SO IF DATA HAVEN'T ARRIVED -> REFRESH PAGE */
-console.log(data);
-if(data == []){
-    window.location.reload();
-}
