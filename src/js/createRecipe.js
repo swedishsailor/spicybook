@@ -23,9 +23,9 @@ document.body.appendChild(createRecipeTemplateContent);
 /* Actions */
 // Click the nav button
 createRecipeButton.addEventListener('click', () => {
+    const copy = createRecipeTemplateContent.cloneNode(true);
     generalContainer.innerHTML = '';
-    generalContainer.appendChild(createRecipeTemplateContent);
-
+    generalContainer.appendChild(copy);
 })
 
 

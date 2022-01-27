@@ -7,8 +7,9 @@ let loginTemplate = document.getElementById('loginTemplate');
 let loginTemplateContent = loginTemplate.content;
 
 document.querySelector('.loginButton').addEventListener('click', () => {
+    const copy = loginTemplateContent.cloneNode(true);
     generalContainer.innerHTML = '';
     //generalContainer.innerHTML += loginHTML;
-    generalContainer.appendChild(loginTemplateContent);
+    generalContainer.appendChild(copy);
 })
 
