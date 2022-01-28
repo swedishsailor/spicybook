@@ -1,0 +1,47 @@
+.createAccountContainer {
+    width: 50%;
+    margin: auto;
+    margin-top: 95px;
+    display: flex;
+    flex-direction: column;
+    .createAccountTitle {
+        text-align: center;
+    }
+
+    label {
+        text-align: center;
+        margin-block: 15px;
+        font-size:21px;
+    }
+
+    input {
+        width: 440px;
+        margin: auto;
+        width: 350px;
+        height: 29px;
+        border: none;
+        border-radius: 2.5px;
+        font-size: 18px;
+        &::placeholder {
+            text-align: center;
+        }
+    }
+
+    .createAccountButton {
+        background:rgb(0, 255, 64);
+        border:none;
+        width:165px;
+        height:45px;
+        border-radius:4.5px;
+        font-size: 22px;
+        margin:auto;
+        margin-top:45px;
+
+        &:hover{
+            box-shadow: 0 0 rgb(255,255,255);
+            transition: 0.4s;
+            background:rgb(129, 243, 76);
+            color:#fff;
+        }
+    }
+}
