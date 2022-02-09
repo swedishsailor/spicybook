@@ -58,7 +58,3 @@ function dataPreparing(){
     correctData = importedData;
     return correctData;
 }
-
-
-
-

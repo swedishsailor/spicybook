@@ -1,6 +1,5 @@
 import { data } from './data';
 import { mainHtmlMaker, getHTML, generalHtmlMaker } from './functions';
-import regeneratorRuntime from "regenerator-runtime";
 
 class Recipe {
     constructor(id, name, img, href, text, bigImg, ingredients, steps) {
@@ -110,8 +109,15 @@ const initEventListeners = () => {
                 generalContainer.innerHTML += generalHtmlMaker(thisRecipe.name, thisRecipe.text, thisRecipe.steps, thisRecipe.bigImg, thisRecipe.ingredients);
             })
         })
+        if(document.querySelector('.recipeDiv')){
+            document.body.removeChild(loadingTag);
+        }
     }, 220);
 }
-// Click the recipe
-initEventListeners();
+const loadingTag = document.createElement('p');
+loadingTag.innerHTML = 'Loading';
+loadingTag.classList.add('loadingTag');
+document.body.appendChild(loadingTag);
 
+// Click the recipe system
+initEventListeners();

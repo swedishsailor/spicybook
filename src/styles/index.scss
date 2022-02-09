@@ -434,6 +434,14 @@ i.navLinks {
     }
   }
 }
+
+.loadingTag{
+  position: absolute;
+  margin:auto;
+  left:45%;
+  margin-top:-105px;
+  font-size: 42px;
+}
 @import "variables";
 @import "./login.scss";
 @import "./createRecipe.scss";
